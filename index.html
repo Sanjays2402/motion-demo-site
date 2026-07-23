@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aperture — The camera that remembers light</title>
+    <meta name="description" content="A hand-built full-frame analog camera for people who still believe a photograph should cost something." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top">APERTURE</a>
+      <nav class="nav__links">
+        <a href="#craft">Craft</a>
+        <a href="#spec">Spec</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+      <a class="nav__cta" href="#reserve">Reserve</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__eyebrow" data-reveal>Est. analog · full frame · hand-assembled</p>
+          <h1 class="hero__title">
+            <span class="line" data-reveal>The camera that</span>
+            <span class="line" data-reveal>remembers <em>light.</em></span>
+          </h1>
+          <p class="hero__sub" data-reveal>
+            No screen. No menu. One roll, thirty-six frames, and every one of them costs you a decision.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--solid" href="#reserve">Reserve yours</a>
+            <a class="btn btn--ghost" href="#craft">See the craft</a>
+          </div>
+        </div>
+        <div class="hero__scrollcue" data-reveal>scroll</div>
+      </section>
+
+      <section class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>MADE BY HAND</span><span>·</span><span>SHOT ON FILM</span><span>·</span><span>NO ALGORITHM</span><span>·</span><span>MADE BY HAND</span><span>·</span><span>SHOT ON FILM</span><span>·</span><span>NO ALGORITHM</span><span>·</span>
+        </div>
+      </section>
+
+      <section class="craft" id="craft">
+        <div class="craft__sticky">
+          <div class="craft__panel" data-panel="0">
+            <span class="craft__num">01</span>
+            <h2>Brass, not plastic.</h2>
+            <p>The body is milled from a single block of aerospace brass, then hand-finished until the seams disappear. It gains weight on purpose. You feel the photograph before you take it.</p>
+          </div>
+          <div class="craft__panel" data-panel="1">
+            <span class="craft__num">02</span>
+            <h2>A shutter you can hear.</h2>
+            <p>A mechanical leaf shutter, assembled by one person, tuned by ear. No battery keeps it alive. In fifty years it will still click at exactly 1/500th.</p>
+          </div>
+          <div class="craft__panel" data-panel="2">
+            <span class="craft__num">03</span>
+            <h2>Glass with a memory.</h2>
+            <p>A 40mm f/2 lens ground from a formula we stopped improving in 1974, because it was already perfect. It renders skin the way you remember it, not the way a sensor insists it looked.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stat">
+        <div class="stat__row">
+          <div class="stat__item" data-reveal>
+            <span class="stat__big" data-count="36">0</span>
+            <span class="stat__label">frames per roll</span>
+          </div>
+          <div class="stat__item" data-reveal>
+            <span class="stat__big" data-count="214">0</span>
+            <span class="stat__label">parts, placed by hand</span>
+          </div>
+          <div class="stat__item" data-reveal>
+            <span class="stat__big" data-count="50">0</span>
+            <span class="stat__label">year mechanical warranty</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="spec" id="spec">
+        <h2 class="spec__title" data-reveal>Specification</h2>
+        <ul class="spec__list">
+          <li data-reveal><span>Format</span><span>35mm full frame</span></li>
+          <li data-reveal><span>Lens</span><span>40mm f/2 fixed, 6 elements</span></li>
+          <li data-reveal><span>Shutter</span><span>Mechanical leaf, 1s – 1/500s</span></li>
+          <li data-reveal><span>Body</span><span>Milled brass, 612g</span></li>
+          <li data-reveal><span>Power</span><span>None required</span></li>
+          <li data-reveal><span>Made in</span><span>A small room, slowly</span></li>
+        </ul>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery__grid">
+          <figure class="g g--1" data-reveal></figure>
+          <figure class="g g--2" data-reveal></figure>
+          <figure class="g g--3" data-reveal></figure>
+          <figure class="g g--4" data-reveal></figure>
+        </div>
+        <p class="gallery__cap" data-reveal>Frames shot on the pre-production unit. Unedited.</p>
+      </section>
+
+      <section class="reserve" id="reserve">
+        <div class="reserve__inner">
+          <h2 data-reveal>Only 500 will be built this year.</h2>
+          <p data-reveal>Reserve now with a refundable deposit. We build in the order reservations arrive, and we do not rush.</p>
+          <form class="reserve__form" data-reveal onsubmit="return false;">
+            <input type="email" placeholder="your@email.com" aria-label="Email" required />
+            <button class="btn btn--solid" type="submit">Reserve — $250 deposit</button>
+          </form>
+          <p class="reserve__fine" data-reveal>$2,400 total · ships spring 2027 · deposit fully refundable</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>APERTURE</span>
+      <span>Built by hand. Not by an algorithm... mostly.</span>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
