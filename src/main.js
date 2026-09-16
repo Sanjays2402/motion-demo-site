@@ -8,12 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Smooth scroll (skip when the user asked for reduced motion)
+let lenis = null;
 if (!reduceMotion) {
-  const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+  lenis = new Lenis({ duration: 1.1, smoothWheel: true });
   lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add((t) => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
 }
+
+// In-page anchors glide to their section instead of jumping under the fixed nav
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const hash = link.getAttribute("href");
+    const target = hash.length > 1 ? document.querySelector(hash) : null;
+    if (!target) return;
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -72, duration: 1.4 });
+    } else {
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  });
+});
 
 // Hero intro
 if (!reduceMotion) {
